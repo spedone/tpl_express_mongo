@@ -1,19 +1,16 @@
 {
   "name": "tpl_express_mongo",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./bin/www"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/spedone/tpl_express_mongo.git"
-  },
-  "author": "Santino Pedone",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/spedone/tpl_express_mongo/issues"
-  },
-  "homepage": "https://github.com/spedone/tpl_express_mongo#readme"
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "express": "^4.18.2",
+    "http-errors": "~1.6.3",
+    "jade": "^1.9.2",
+    "morgan": "~1.9.1"
+  }
 }
