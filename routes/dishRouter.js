@@ -1,6 +1,5 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
 
 const Dishes = require('../models/dishes');
 
@@ -15,7 +14,7 @@ dishRouter.route('/')
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
             res.json(dishes);
-        }, (err) => next(err))
+        })
         .catch((err) => next(err));
     })
     .post((req, res, next) => {
@@ -25,7 +24,7 @@ dishRouter.route('/')
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
             res.json(dish);
-        }, (err) => next(err))
+        })
         .catch((err) => next(err));
     })
     .put((req, res, next) => {
@@ -38,7 +37,7 @@ dishRouter.route('/')
             res.statusCode = 200;
             res.setHeader('Content-Type', 'application/json');
             res.json(resp);
-        }, (err) => next(err))
+        })
         .catch((err) => next(err));    
     });
 
